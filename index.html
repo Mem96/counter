@@ -1,9 +1,26 @@
 <!DOCTYPE html>
 <html>
     <head>
-
+        <title>Counter</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+        <script src="script/script.js" defer></script>
+        <link rel="stylesheet" href="style/style.css">
+        <link rel='icon' href="style/favicon.ico">
     </head>
     <body>
-        
+        <h1>Counter</h1>
+        <div class="counter-container">
+            <button class="operator subtract by-ten">-10</button>
+            <button class="operator subtract by-five">-5</button>
+            <button class="operator subtract by-one">-</button>
+            <p class="counter-display">3</p>
+            <button class="operator add by-one">+</button>
+            <button class="operator add by-five">+5</button>
+            <button class="operator add by-ten">+10</button>
+        </div>
+        <button class="reset-button">Reset</button>
+        <input type="checkbox" name="reverse">
+        <label for="reverse">Reverse count</label>
     </body>
 </html>
