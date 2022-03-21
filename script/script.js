@@ -121,6 +121,7 @@ reverseButton.addEventListener('click', () => {
         document.body.style.setProperty('background', 'linear-gradient(to left, rgb(101, 101, 182), rgb(182, 101, 101))');
         counterContainer.style.setProperty('flex-direction', 'row-reverse');
         //modify shadow to be the same direction even if buttons are inverted
+
         /*I omitted this part because button:active doesn't work anymore after that.
         I tried different solutions but none of them worked properly.
 
@@ -134,6 +135,7 @@ reverseButton.addEventListener('click', () => {
         counter = 0;
         document.body.style.setProperty('background', 'linear-gradient(to right, rgb(101, 101, 182), rgb(182, 101, 101))');
         counterContainer.style.setProperty('flex-direction', 'row');
+        
         /*Array.from(addButtons).forEach(function(button){
             button.style.setProperty('box-shadow', '5px 3px 2px rgba(0, 0, 0, .4)');
         });
