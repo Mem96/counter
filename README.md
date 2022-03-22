@@ -2,6 +2,7 @@
 This project is a counter. It's a way to temporarily keep track of any number between 0 and 100. 
 
 I thought of it as something that could be useful to keep your score during a board game night: no more paper waste!
+
 **You can try this project on [GitHub Pages](https://mem96.github.io/counter/).**
 
 I engaged in this project as part of my learning journey on [Start2Impact](https://www.start2impact.it/).
