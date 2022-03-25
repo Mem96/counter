@@ -1,15 +1,52 @@
 const counterContainer = document.querySelector('.counter-container');
-const counterDisplay = document.querySelector('.counter-display');
 
+// create display and buttons
+let counterDisplay = document.createElement('p');
+counterDisplay.classList.add('counter-display');
+counterContainer.appendChild(counterDisplay);
+
+let addOneButton = document.createElement('button');
+addOneButton.innerHTML = '+1'
+addOneButton.classList.add('operator');
+addOneButton.classList.add('add');
+addOneButton.classList.add('by-one');
+counterContainer.appendChild(addOneButton);
+
+let addFiveButton = addOneButton.cloneNode(true);
+addFiveButton.innerHTML = '+5'
+addFiveButton.classList.remove('by-one')
+addFiveButton.classList.add('by-five');
+counterContainer.appendChild(addFiveButton);
+
+let addTenButton = addOneButton.cloneNode(true);
+addTenButton.innerHTML = '+10'
+addTenButton.classList.remove('by-one')
+addTenButton.classList.add('by-ten');
+counterContainer.appendChild(addTenButton);
+
+let subtractOneButton = document.createElement('button');
+subtractOneButton.innerHTML = '-1'
+subtractOneButton.classList.add('operator');
+subtractOneButton.classList.add('subtract');
+subtractOneButton.classList.add('by-one');
+counterContainer.insertBefore(subtractOneButton, counterDisplay);
+
+let subtractFiveButton = subtractOneButton.cloneNode(true);
+subtractFiveButton.innerHTML = '-5';
+subtractFiveButton.classList.remove('by-one');
+subtractFiveButton.classList.add('by-five');
+counterContainer.insertBefore(subtractFiveButton, subtractOneButton);
+
+let subtractTenButton = subtractOneButton.cloneNode(true);
+subtractTenButton.innerHTML = '-10';
+subtractTenButton.classList.remove('by-one');
+subtractTenButton.classList.add('by-ten');
+subtractTenButton.before(subtractFiveButton);
+counterContainer.insertBefore(subtractTenButton, subtractFiveButton);
+
+// define all elements
 const addButtons = document.querySelectorAll('.add');
 const subtractButtons = document.querySelectorAll('.subtract');
-const addOneButton = document.querySelector('.operator.add.by-one');
-const subtractOneButton = document.querySelector('.operator.subtract.by-one');
-const addFiveButton = document.querySelector('.operator.add.by-five');
-const subtractFiveButton = document.querySelector('.operator.subtract.by-five');
-const addTenButton = document.querySelector('.operator.add.by-ten');
-const subtractTenButton = document.querySelector('.operator.subtract.by-ten');
-
 const alert = document.querySelector('#alert');
 const resetButton = document.querySelector('.reset-button');
 const reverseButton = document.querySelector('input[type=checkbox]');
